@@ -139,4 +139,16 @@ Class Caixa
         $this->order = $order;
     }
 
+    /*
+    Método que retora uma array da classe Caixa.
+    Definer a regra de negocio entrea as comunicações
+    */
+    public function asArray(): array
+    {
+        return [
+            'name' => $this->name,
+            'order' => $this->order,         
+        ];
+    }
+
 }
