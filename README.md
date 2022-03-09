@@ -22,3 +22,7 @@ composer create-project symfony/skeleton RestApi-PHP
 
 1. Metodos Getter's and Setter's.
 1. Atributo  $name em Caixa
+1. Criado Factory para Caixa.
+1. composer require symfony/orm-pack
+1. composer require --dev symfony/maker-bundle
+1. Criado Controller Classe Caixa.
