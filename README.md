@@ -27,3 +27,4 @@ composer create-project symfony/skeleton RestApi-PHP
 1. composer require --dev symfony/maker-bundle
 1. Criado Controller Classe Caixa.
 1. Criado Método asArray em Caixa.
+1. Extenção de CaixaController para AbstractController
