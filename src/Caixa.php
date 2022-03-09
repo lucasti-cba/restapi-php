@@ -3,9 +3,9 @@
 
 Class Caixa
 {
-    public $name = 'Caixa';
-    public $order = ['Caixa.numero' => 'ASC'];
-    public $validate = [
+    private $name = 'Caixa';
+    private $order = ['Caixa.numero' => 'ASC'];
+    private $validate = [
         'numero' => [
             'numeric' => [
                 'rule' => ['numeric'],
@@ -39,7 +39,7 @@ Class Caixa
     ];
 
 
-    public $belongsTo = [
+    private $belongsTo = [
         'Estante' => [
             'className' => 'Estante',
             'foreignKey' => 'estante_id',
@@ -70,7 +70,7 @@ Class Caixa
         ],
     ];
 
-    public $hasMany = [
+    private $hasMany = [
         'CaixaDocumento' => [
             'className' => 'CaixaDocumento',
             'foreignKey' => 'caixa_id',
@@ -93,13 +93,50 @@ Class Caixa
         ],
     ];
 
-    public $virtualFields = [
+    private $virtualFields = [
         'codigo_barras' => "('AG-' || lpad(Caixa.arquivo_geral_id ||'',3,'0') || '-' || lpad(Caixa.numero||'',6,'0'))",
         'numero_formatado' => "(lpad(Caixa.numero||'',6,'0'))",
         'nome_formatado'   => "lpad(Caixa.numero||'',6,'0')",
     ];
 
-    public $actsAs = ['Log', 'Containable', 'Linkable'];
+    private $actsAs = ['Log', 'Containable', 'Linkable'];
 
+
+
+    //Métodos Getter's e Setter's
+
+    /*
+    Método getter para o atributo name da classe
+    */
+    public Function getName()
+    {
+        return $this->name;
+    }
+
+    /*
+    Método setter para o atributo name da classe
+    $name -> Paramentro  nome 
+    Altera o atributo $nome de acordo com o parametro $nome
+    */
+    public Function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /*
+    Método getter do atributo order da classe Caixa.
+    */
+    public function getOrder() 
+    {
+        return $this->order;
+    }
+    
+    /* 
+    Método setter do atributo order da classe Caixa.
+    */
+    public function setOrder($order)
+    {
+        $this->order = $order;
+    }
 
 }

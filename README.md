@@ -5,7 +5,7 @@ Criando Esqueleto Esqueleto
 
 composer create-project symfony/skeleton RestApi-PHP
 
-<--Saida Inicio--> 
+<--Saida Inicio-->
 
  symfony/framework-bundle  instructions:
 
@@ -17,3 +17,8 @@ composer create-project symfony/skeleton RestApi-PHP
   * Read the documentation at https://symfony.com/doc
   
   <--Saida Fim-->
+
+1. Criado classe Caixa
+
+1. Metodos Getter's and Setter's.
+1. Atributo  $name em Caixa
