@@ -130,11 +130,11 @@ Class Caixa
     {
         return $this->order;
     }
-    
+
     /* 
     Método setter do atributo order da classe Caixa.
     */
-    public function setOrder($order)
+    public function setOrder(array $order)
     {
         $this->order = $order;
     }
