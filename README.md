@@ -33,3 +33,8 @@ composer create-project symfony/skeleton RestApi-PHP
 1. add em .env DATABASE_URL="postgresql://"$USER_DB_NAME":"$PASSWORD_DB"@"$HOST_DB":"$PORT_DB"/"$DB_NAME"?serverVersion="$VERSION_DB"&charset="$CHARSET_DB"
 1. php bin/console make:docker:database
 1. composer require symfony/uid
+1. php bin/console make:entity
+1. php bin/console make:migration
+1. php bin/console doctrine:migrations:migrate
+1. php bin/console make:command add-caixa
+
